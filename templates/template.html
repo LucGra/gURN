@@ -7,29 +7,31 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
     </head>
     <body>
-        <section class="hero is-primary is-fullheight">
-            <div class="hero-head">
-                <nav class="navbar">
-                    <div class="container">
-                        <div id="navbar_menu" class="navbar-menu">
-                            <div class="navbar-end">
-                                <a href="/" class="navbar-item">
-                                    Home
-                                </a>
-                                <a href="/login" class="navbar-item">
-                                    Login/Register
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </nav>
+        <nav class="navbar is-primary" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="/">
+                    <img src="">
+                    gURN
+                </a>
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                  </a>
             </div>
-            <div class="hero-body">
-                <div class="container has-text-centered">
-                    {% block content %}
-                    {% endblock %}
+
+            <div id="navbar" class="navbar-menu">
+                <div class="navbar-end">
+                    <a class="navbar-item" href="/login">Login/Register</a>
                 </div>
             </div>
-        </section>
+        </nav>
+        <div class="container">
+            {% block content %}
+            {% endblock %}
+        </div>
+
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     </body>
 </html>
